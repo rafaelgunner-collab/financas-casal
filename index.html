@@ -312,10 +312,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
       <!-- RESUMO -->
       <div id="page-resumo" class="content">
-        <div id="new-month-banner" style="display:none;" class="info-box" style="margin-bottom:1rem;">
-          📋 <strong>Mês novo!</strong> Seu orçamento base foi pré-carregado. Confirme os lançamentos, ajuste valores e adicione extras na aba <strong>Lançamentos</strong>.
-          <button onclick="document.getElementById('new-month-banner').style.display='none'" style="float:right;background:none;border:none;cursor:pointer;color:var(--amber);font-weight:700;">✕</button>
-        </div>
         <div class="stats-grid" id="statsGrid"></div>
         <!-- savings rate -->
         <div class="card" id="savingsCard" style="margin-bottom:1rem;"></div>
@@ -358,9 +354,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
           <button class="add-btn" onclick="openTplModal()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Novo item</button>
         </div>
-        <div class="info-box blue" style="margin-bottom:1rem;">
-          💡 O <strong>Orçamento Base</strong> é seu modelo mensal. Cadastre aqui todos os itens fixos (salário, aluguel, internet, etc.). Ao iniciar um mês novo, você carrega esse modelo em <strong>Lançamentos → Carregar orçamento base</strong> e ajusta o que mudou.
-        </div>
         <div class="grid-2">
           <div class="card">
             <div class="card-head"><span class="card-title">💰 Receitas fixas</span><span id="tplRecTotal" style="font-size:13px;font-weight:700;color:var(--green);"></span></div>
@@ -379,9 +372,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
           <button class="add-btn" onclick="openModal('metaModal')"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Nova meta</button>
         </div>
         <div class="stats-grid" id="metaStats" style="grid-template-columns:repeat(3,1fr);margin-bottom:1rem;"></div>
-        <div class="info-box purple" style="margin-bottom:1rem;">
-          💡 Para lançar um aporte mensal numa meta, use a categoria <strong>"🎯 Meta"</strong> nos lançamentos e escreva o nome da meta na descrição. O sistema contabiliza como despesa planejada e atualiza o progresso automaticamente.
-        </div>
         <div class="card"><div class="card-head"><span class="card-title">Projetos e metas</span></div><div class="card-body" id="metaList"></div></div>
       </div>
 
@@ -489,9 +479,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="modal">
     <div class="modal-head"><span class="modal-title">Carregar orçamento base</span><button class="modal-close" onclick="closeModal('tplApplyModal')">×</button></div>
     <div class="modal-body">
-      <div class="info-box" style="margin-bottom:1rem;">
-        Isso vai copiar todos os itens do orçamento base para os lançamentos de <strong id="tplApplyMonth"></strong>. Você poderá editar ou excluir cada um depois. Itens já existentes no mês não serão duplicados.
-      </div>
       <div id="tplApplyPreview"></div>
     </div>
     <div style="padding:0 1.5rem 1.5rem;">
